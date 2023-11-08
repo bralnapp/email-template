@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				text-decoration: none;
+			}
+
+			body {
+				font-family: "Figtree", sans-serif;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			p {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 20px;
+				color: #333333;
+			}
+
+			.layout-container {
+				width: 90%;
+				margin: 32px auto;
+			}
+
+			header img {
+				margin: auto;
+				display: block;
+				margin-bottom: 40px;
+			}
+
+			header p {
+				font-weight: 600;
+				text-align: center;
+				font-size: 21px;
+				line-height: 32px;
+				color: #101828;
+			}
+
+			.content-body {
+				margin-top: 32px;
+				display: flex;
+				flex-direction: column;
+				row-gap: 24px;
+				padding-bottom: 32px;
+			}
+
+			.sub-heading {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 20px;
+				color: #333333;
+				margin-bottom: 8px;
+			}
+
+			#skills-list {
+				display: flex;
+				column-gap: 12px;
+				flex-wrap: nowrap;
+			}
+
+			#skills-list li {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 20px;
+				color: #101828;
+				background: #f3f2f3;
+				border-radius: 46px;
+				padding: 4px 10px;
+			}
+
+			.divider-line {
+				width: 125px;
+				border: 1px solid #0000003d;
+				margin: auto;
+			}
+
+			footer {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			footer ul {
+				display: flex;
+				column-gap: 24px;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body class="layout-container">
+		<header>
+			<img src="./image/Logo.png" />
+			<p>
+				Hi Sachin,<br />
+				You've Been Invited to Collaborate on a Exciting New Project!
+			</p>
+		</header>
+		<div class="content-body">
+			<p>
+				Hi there, <br />
+				I am writing to inform you that you have been invited to join a
+				thrilling new project on our platform. Someone has recognized your
+				skills and expertise, and they believe you would be a valuable asset to
+				their project.
+			</p>
+			<!-- Project name -->
+			<div>
+				<h2 class="sub-heading">Project name:</h2>
+				<p>Reservoir Survey</p>
+			</div>
+			<!-- Objectives -->
+			<div>
+				<h2 class="sub-heading">Objectives:</h2>
+				<p>
+					Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet
+					commodo consectetur convallis risus. Sed condimentum enim dignissim
+					adipiscing faucibus consequat, urna. Viverra purus et erat auctor
+					aliquam. Risus, volutpat vulputate posuere purus sit congue convallis
+					aliquet.
+				</p>
+			</div>
+
+			<!-- Skills -->
+			<div>
+				<h2 class="sub-heading">Skills:</h2>
+				<div id="skills-container">
+					<ul id="skills-list"></ul>
+				</div>
+			</div>
+
+			<!-- Suspected problem -->
+			<div>
+				<h2 class="sub-heading">Suspected problem:</h2>
+				<p>
+					Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet
+					commodo consectetur convallis risus. Sed condimentum enim dignissim
+					adipiscing faucibus consequat, urna. Viverra purus et erat auctor
+					aliquam. Risus, volutpat vulputate posuere purus sit congue convallis
+					aliquet.
+				</p>
+			</div>
+			<div style="text-align: center">
+				<p>
+					To view the full project details and accept the invitation, please
+					click on the following <br />link:
+					<a
+						href="https://luna.zimzim.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						>https://luna.zimzim.com</a
+					>
+				</p>
+			</div>
+			<div class="divider-line"></div>
+		</div>
+
+		<footer>
+			<img src="./image/Logo.png" />
+			<ul>
+				<li>
+					<a href="/" target="_blank" rel="noopener noreferrer">
+						<img src="./image/twitter-logo.png" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="/" target="_blank" rel="noopener noreferrer">
+						<img src="./image/facebook-logo.png" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="/" target="_blank" rel="noopener noreferrer">
+						<img src="./image/linkedln-logo.png" alt="" />
+					</a>
+				</li>
+			</ul>
+		</footer>
+
+		<script>
+			// Array of skills
+			const skills = [
+				"Production/ Operations Practices",
+				"Geology",
+				"Reservoir",
+				"Well Integrity",
+				"Facilities"
+			];
+
+			// Get the skills list container
+			const skillsList = document.getElementById("skills-list");
+
+			// Iterate over the skills array
+			skills.forEach((skill) => {
+				// Create a list item element for each skill
+				const listItem = document.createElement("li");
+
+				// Set the text content of the list item to the skill
+				listItem.textContent = skill;
+
+				// Append the list item to the skills list container
+				skillsList.appendChild(listItem);
+			});
+		</script>
+	</body>
+</html>
